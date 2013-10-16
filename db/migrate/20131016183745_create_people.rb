@@ -10,5 +10,9 @@ class CreatePeople < ActiveRecord::Migration
 
       t.timestamps
     end
+  # this makes reading house_id columns much faster
+  # don't do this on everything b/c there's a slight speed penalty 
+  # for writing contend
+  add_index :people, :house_id
   end
 end
