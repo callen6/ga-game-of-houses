@@ -1,4 +1,6 @@
 GameOfHouses::Application.routes.draw do
+  resources :people
+
 resources :houses, only: [:show, :index]  # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
