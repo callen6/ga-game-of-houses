@@ -6,6 +6,7 @@ class CreatePeople < ActiveRecord::Migration
       t.string :pet
       t.string :worst_subject
       t.boolean :quidditch_player
+      t.belongs_to :house #t.references :house is alt
 
       t.timestamps
     end
