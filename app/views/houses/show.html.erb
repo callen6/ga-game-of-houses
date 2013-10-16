@@ -12,7 +12,9 @@
 	</dl>
 
 <h3>Students</h3>
-	<ul> 
-		<li>student 1</li>
-		<li>student 2</li>
+	<ul>
+	<% @house.people.each do |person| %>
+
+		<li><%= link_to person.name, person %></li>
+	<% end %>
 	</ul>

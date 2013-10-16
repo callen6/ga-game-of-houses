@@ -31,6 +31,11 @@
     <%= f.label :quidditch_player %><br>
     <%= f.check_box :quidditch_player %>
   </div>
+    <div class="field">
+    <%= f.label :house %><br>
+    <%= collection_select(:person, :house_id, House.all, :id, :name, prompt: true)%>
+  </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>

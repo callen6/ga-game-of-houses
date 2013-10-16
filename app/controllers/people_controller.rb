@@ -61,6 +61,7 @@ class PeopleController < ApplicationController
     end
   end
 
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_person
@@ -69,6 +70,6 @@ class PeopleController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def person_params
-      params.require(:person).permit(:name, :birthday, :pet, :worst_subject, :quidditch_player)
+      params.require(:person).permit(:name, :birthday, :pet, :worst_subject, :quidditch_player, :house_id)
     end
 end
